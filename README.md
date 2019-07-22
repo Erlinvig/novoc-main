@@ -1,5 +1,10 @@
 # novoc
 
+## gh-pages link
+```
+https://erlinvig.github.io/novoc-main/
+```
+
 ## Project setup
 ```
 npm install
