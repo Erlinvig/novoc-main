@@ -44,6 +44,7 @@
 <style lang="scss" scoped>
   .home {
     .right {
+      z-index: 1;
       position: fixed;
       right: 0;
       top: 40%;
