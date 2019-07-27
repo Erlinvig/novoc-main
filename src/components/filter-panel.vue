@@ -20,12 +20,12 @@
                         <template v-slot:dot="{ index }">
                             <span v-if="index === 0" class="custom-dot">
                                 <font-awesome-icon icon="angle-left" class="custom-dot__decoration-left"></font-awesome-icon>
-                                <span class="custom-dot__value">от {{value[0]}}</span>
+                                <span class="custom-dot__value">{{preposition1}} {{value[0]}}</span>
                                 <font-awesome-icon icon="angle-right" class="custom-dot__decoration-right"></font-awesome-icon>
                             </span>
                             <span v-if="index === 1" class="custom-dot">
                                 <font-awesome-icon icon="angle-left" class="custom-dot__decoration-left"></font-awesome-icon>
-                                <span class="custom-dot__value">до {{value[1]}}</span>
+                                <span class="custom-dot__value">{{preposition2}} {{value[1]}}</span>
                                 <font-awesome-icon icon="angle-right" class="custom-dot__decoration-right"></font-awesome-icon>
                             </span>
                         </template>
@@ -141,6 +141,14 @@
                     {value: 'Вариант 2', id: 2},
                     {value: 'Вариант 3', id: 3}
                 ]
+            }
+        },
+        computed: {
+            preposition1() {
+                return this.value[0] < this.value[1] ? 'от' : 'до'
+            },
+            preposition2() {
+                return this.value[0] < this.value[1] ? 'до' : 'от'
             }
         }
     }
