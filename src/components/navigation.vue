@@ -7,12 +7,12 @@
                     <label for="search"></label>
                     <input id="search" type="text" placeholder="Введите запрос">
                 </li>
-                <li><a href="#" class="menu__item active">Новостройки</a></li>
-                <li><a href="#" class="menu__item">Элитная недвижимость</a></li>
-                <li><a href="#" class="menu__item">Коммерческая недвижимость</a></li>
-                <li><a href="#" class="menu__item">Загородная недвижимость</a></li>
-                <li><a href="#" class="menu__item">Услуги</a></li>
-                <li><a href="#" class="menu__item">Контакты</a></li>
+                <li v-if="!isOpenSearchPanel"><a href="#" class="menu__item active">Новостройки</a></li>
+                <li v-if="!isOpenSearchPanel"><a href="#" class="menu__item">Элитная недвижимость</a></li>
+                <li v-if="!isOpenSearchPanel"><a href="#" class="menu__item">Коммерческая недвижимость</a></li>
+                <li v-if="!isOpenSearchPanel"><a href="#" class="menu__item">Загородная недвижимость</a></li>
+                <li v-if="!isOpenSearchPanel"><a href="#" class="menu__item">Услуги</a></li>
+                <li v-if="!isOpenSearchPanel"><a href="#" class="menu__item">Контакты</a></li>
                 <li><a href="#" class="menu__item" @click="search">
                     <font-awesome-icon icon="search" class="menu__search"></font-awesome-icon>
                 </a></li>
@@ -67,20 +67,20 @@
 
 
         .menu__search-field {
-            position: absolute;
             display: none;
             align-items: center;
             margin-top: -5px;
             background-color: #fff;
             transition: .5s ease;
             input {
+                width: 100%;
                 font-size: 18px;
                 opacity: 0;
             }
             .menu__back {
                 margin-right: 1em;
-                width: 2em;
-                height: 2em;
+                width: 1.5em;
+                height: 1.5em;
                 cursor: pointer;
                 transition: .5s ease;
                 opacity: 0;
