@@ -1,14 +1,14 @@
 <template>
   <div class="home">
     <div class="right">
-      <button class="btn-right">
+      <a class="btn-right">
         <font-awesome-icon icon="phone" class="icon"></font-awesome-icon>
-        Обратный звонок
-      </button>
-      <button class="btn-right">
+        <span>Обратный звонок</span>
+      </a>
+      <a class="btn-right">
         <font-awesome-icon icon="calendar-alt" class="icon"></font-awesome-icon>
-        Записаться на показ
-      </button>
+        <span>Записаться на показ</span>
+      </a>
     </div>
     <filter-panel />
     <app-map />
@@ -48,8 +48,17 @@
       position: fixed;
       right: 0;
       top: 40%;
+      a {
+        display: flex;
+        flex-direction: column;
 
-      button:first-child {
+        span {
+          text-align: center;
+          user-select: none;
+        }
+      }
+
+      a:first-child {
         margin-bottom: 6px;
       }
 

@@ -171,8 +171,11 @@
         .card__more {
             position: absolute;
             display: flex;
-            margin-top: -1em;
             text-transform: uppercase;
+
+            a {
+                margin: 1em;
+            }
         }
     }
 
